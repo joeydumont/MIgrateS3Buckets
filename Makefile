@@ -30,7 +30,7 @@ build:
 	go build -ldflags "-X github.com/joeydumont/MigrateS3Buckets/version.GitCommit=${GIT_COMMIT}${GIT_DIRTY} -X github.com/joeydumont/MigrateS3Buckets/version.BuildDate=${BUILD_DATE}" -o bin/${BIN_NAME}
 
 get-deps:
-	dep ensure
+	go get
 
 build-alpine:
 	@echo "building ${BIN_NAME} ${VERSION}"
